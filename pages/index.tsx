@@ -2,8 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import styles from '@/pages/index.module.css'
+import {useEffect, useState} from "react";
 
 export default function Home() {
+  const [myNumber, setMyNumber] = useState(0);
+  useEffect(() => {
+    setMyNumber(Math.round(Math.random()*100));
+  }, []);
   return (
     <div className={styles.container}>
       <Head>
@@ -17,7 +22,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
+          Get started by editing <code>{myNumber}</code>
         </p>
 
         <div className={styles.grid}>
