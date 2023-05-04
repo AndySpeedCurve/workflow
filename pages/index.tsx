@@ -24,6 +24,8 @@ export default function Home() {
           Welcome to Animal Description Thingymajig, made by Andy.
         </h1>
 
+        <p>This site performs a jest check on the functions using a github action. If all actions in github pass then it triggers a build using a netlify webhook.</p>
+
         <div>
           <button onClick={() => updateAnimal("rabbit")}>Rabbit</button>
           <button onClick={() => updateAnimal("kiwi")}>Kiwi</button>
