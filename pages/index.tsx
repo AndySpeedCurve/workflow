@@ -21,7 +21,7 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-          Welcome to Animal Description Thingymajig!
+          Welcome to Animal Description Thingymajig, made by Andy.
         </h1>
 
         <div>
