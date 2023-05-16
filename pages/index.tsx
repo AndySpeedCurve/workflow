@@ -21,7 +21,7 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-          Welcome to Animal Description Thingymajig, made by Andy.
+          Welcome to Animal Description Thingymajiggy, made by Andy.
         </h1>
 
         <p>This site performs a jest check on the functions using a github action. If all actions in github pass then it triggers a build using a netlify webhook. Lets see what happens as I push a PR. I would like to see what happens when this is setup as a PR.</p>
