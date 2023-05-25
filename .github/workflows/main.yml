@@ -24,4 +24,3 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
-      - run: curl -X POST -d '{}' https://api.netlify.com/build_hooks/6453113d6abab629c316ae62

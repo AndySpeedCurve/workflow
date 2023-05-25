@@ -1,4 +1,4 @@
-import {getAnimalDescription} from "./animal";
+import {getAnimalDescription, getAnimalPhoto} from "./animal";
 
 describe("getAnimalDescription", () => {
     it("should return the description for 'rabbit'", () => {
@@ -19,5 +19,28 @@ describe("getAnimalDescription", () => {
     it("should return the default message for an unknown animal name", () => {
         const description = getAnimalDescription("unicorn");
         expect(description).toBe("What the heck is that?");
+    });
+});
+
+
+describe("getAnimalPhoto", () => {
+    it("should return the url for 'rabbit'", () => {
+        const url = getAnimalPhoto("rabbit");
+        expect(url).toBe("/image/rabbit.jpg");
+    });
+
+    it("should return the url for 'kiwi'", () => {
+        const url = getAnimalPhoto("kiwi");
+        expect(url).toBe("/image/kiwi.jpg");
+    });
+
+    it("should return the url for 'cat'", () => {
+        const url = getAnimalPhoto("cat");
+        expect(url).toBe("/image/cat.jpg");
+    });
+
+    it("should return the default url for an unknown animal", () => {
+        const url = getAnimalPhoto("unicorn");
+        expect(url).toBe("/image/monster.jpg");
     });
 });
