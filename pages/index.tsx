@@ -3,13 +3,15 @@ import Image from 'next/image'
 
 import styles from '@/pages/index.module.css'
 import {useState} from "react";
-import {getAnimalDescription} from "../lib/animal";
+import {getAnimalDescription, getAnimalPhoto} from "../lib/animal";
 
 export default function Home() {
   const [animalDesc, setAnimalDesc] = useState("None");
+  const [animalPhotoURL, setAnimalPhotoURL] = useState("");
 
   function updateAnimal(animalName: string){
     setAnimalDesc(getAnimalDescription(animalName));
+    setAnimalPhotoURL(getAnimalPhoto(animalName))
   }
 
   return (
@@ -23,6 +25,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to Animal Description Thingymajiggy, made by Andy.
         </h1>
+
+
 
         <p>This site performs a jest check on the functions using a github action. If all actions in github pass then it triggers a build using a netlify webhook. Lets see what happens as I push a PR. I would like to see what happens when this is setup as a PR.</p>
 

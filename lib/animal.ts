@@ -13,3 +13,20 @@ export function getAnimalDescription(animalName: string): string {
             return "What the heck is that?";
     }
 }
+
+export function getAnimalPhoto(animalName: string): string {
+    switch(animalName){
+        case "rabbit":
+            return "/image/rabbit.jpg";
+            break;
+        case "kiwi":
+            return "/image/kiwi.jpg";
+            break;
+        case "cat":
+            return "/image/cat.jpg";
+            break;
+        default:
+            return "/image/monster.jpg";
+    }
+}
+
